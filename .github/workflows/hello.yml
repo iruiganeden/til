@@ -3,7 +3,7 @@ on: push
 jobs:
   hello:
     runs-on: ubuntu-latest
-    step:
+    steps:
       - run: echo "Hello world"
       - uses: actions/checkout@v4
 

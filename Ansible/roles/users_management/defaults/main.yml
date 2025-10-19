@@ -1,0 +1,9 @@
+---
+# デフォルトのグループ設定
+groups_list: []
+
+# デフォルトのユーザー設定
+users_list: []
+
+# デフォルトのシェル
+default_shell: /bin/bash

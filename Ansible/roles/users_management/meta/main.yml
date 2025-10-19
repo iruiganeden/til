@@ -1,0 +1,24 @@
+---
+galaxy_info:
+  author: your_name
+  description: ユーザーとグループを管理するAnsibleロール
+  company: your_company
+  license: MIT
+  min_ansible_version: 2.9
+  platforms:
+    - name: EL
+      versions:
+        - 7
+        - 8
+    - name: Ubuntu
+      versions:
+        - 18.04
+        - 20.04
+        - 22.04
+  galaxy_tags:
+    - users
+    - groups
+    - system
+    - administration
+
+dependencies: []

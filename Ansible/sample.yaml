@@ -1,0 +1,29 @@
+---
+- name: 外部ファイルからユーザとグループを作成する
+  hosts: all
+  become: true
+  vars_files:
+    - users_and_groups.yml
+
+  tasks:
+    - name: グループを作成する
+      ansible.builtin.group:
+        name: "{{ item.name }}"
+        gid: "{{ item.gid | default(omit) }}"
+        state: present
+      loop: "{{ groups_list }}"
+      loop_control:
+        label: "{{ item.name }}"
+
+    - name: ユーザを作成する
+      ansible.builtin.user:
+        name: "{{ item.name }}"
+        uid: "{{ item.uid | default(omit) }}"
+        group: "{{ item.group }}"
+        groups: "{{ item.groups | default(omit) }}"
+        shell: "{{ item.shell | default(omit) }}"
+        state: present
+      loop: "{{ users_list }}"
+      loop_control:
+        label: "{{ item.name }}"
+

@@ -1,0 +1,9 @@
+---
+- name: ユーザーとグループ管理のメインプレイブック
+  hosts: all
+  become: true
+  vars_files:
+    - users_and_groups.yml
+
+  roles:
+    - users_management

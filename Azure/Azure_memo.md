@@ -1,7 +1,7 @@
 論理アーキテクチャ図
 
+```mermaid
 flowchart TB
-
     %% オンプレ側
     subgraph OnPrem["オンプレ / 他監視システム側"]
         NMS["外部監視システム\n(NOC / 既存監視基盤)"]
@@ -56,3 +56,4 @@ flowchart TB
     %% VNet間接続
     Prod ---|"VNet Peering\n(Prod ↔ Hub)"| Hub
     Test ---|"VNet Peering\n(Test ↔ Hub)"| Hub
+```

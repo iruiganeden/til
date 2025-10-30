@@ -1,8 +1,9 @@
-#論理アーキテクチャ図
+論理アーキテクチャ図
 
 flowchart TB
+
     %% オンプレ側
-    subgraph OnPrem["オンプレ/他監視システム側"]
+    subgraph OnPrem["オンプレ / 他監視システム側"]
         NMS["外部監視システム\n(NOC / 既存監視基盤)"]
     end
 

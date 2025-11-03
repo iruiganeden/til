@@ -1,3 +1,5 @@
+
+```mermaid
 flowchart LR
     %% ================================================
     %% Netcool 論理構成（2台 ホットスタンバイ）
@@ -73,3 +75,4 @@ flowchart LR
     WebBrowser --> WEB
     NativeDesktop --> OS1
     NativeDesktop -.-> OS2
+```
